@@ -11,8 +11,8 @@ const webpack = require('webpack');
 module.exports = {
 	mode:"development",
     entry: {
-		index: './src/index.js'
-		// login: './src/login.js'
+		index: './src/index.js',
+		mobile: './src/mobile.js'
 	},
     output: {
         filename: '[name].js',      // 打包后的文件名称
@@ -104,11 +104,11 @@ module.exports = {
             filename: 'index.html',
             chunks: ['vendor', 'index', 'utils']    // 对应关系,index.js对应的是index.html
         }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/login.html',
-        //     filename: 'login.html',
-        //     chunks: ['vendor', 'login', 'utils']    // 对应关系,login.js对应的是login.html
-		// }),
+        new HtmlWebpackPlugin({
+            template: './src/mobile.html',
+            filename: 'mobile.html',
+            chunks: ['vendor', 'mobile', 'utils']    // 对应关系,login.js对应的是login.html
+		    }),
 		// 拆分后会把css文件放到dist目录下的css/style.css
 		new ExtractTextWebpackPlugin('css/style.css'),
 		new CleanWebpackPlugin()
@@ -149,7 +149,6 @@ module.exports = {
         port: 3000,             // 端口
         open: true,             // 自动打开浏览器
         hot: true,               // 开启热更新
-        hotOnly: true, //不让浏览器自动刷新
         historyApiFallback: true
 	},
 	devtool: 'cheap-module-eval-source-map'

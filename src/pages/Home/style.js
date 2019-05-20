@@ -6,7 +6,7 @@ export const HomeWrapper = styled.div`
   background: #f6f9fe url(${bgImg}) no-repeat center top;
   position: relative;
   .container {
-    position:relative;
+    position: relative;
     width: 1200px;
     margin: 0 auto;
     :after {
@@ -16,6 +16,7 @@ export const HomeWrapper = styled.div`
       height: 0;
     }
   }
+
   #ct-header {
     height: 64px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -35,6 +36,8 @@ export const HomeWrapper = styled.div`
     height: 32px;
     vertical-align: middle;
     position: relative;
+    width: 277px;
+    float: right;
     #ct-show {
       display: inline-block;
       vertical-align: middle;
@@ -56,6 +59,54 @@ export const HomeWrapper = styled.div`
         background-size: 234px 212px;
         margin-right: 7px;
         margin-top: 1px;
+      }
+    }
+    #ct-hot-city {
+      display: none;
+      position: absolute;
+      width: 277px;
+      min-height: 86px;
+      background: #fff;
+      left: 8px;
+      top: 60px;
+      box-shadow: 0 0 4px 0 rgba(0,0,0,.1);
+      border-radius: 5px;
+      padding: 17px 0;
+      color: #555;
+      &.show {
+        display: show;
+      }
+      .tit {
+        text-align: left;
+        font-size: 12px;
+        color: #9f9f9f;
+        height: 17px;
+        line-height: 17px;
+        margin-left: 20px;
+      }
+      .ls-city {
+        clear: both;
+        margin: 10px 2px 0 16px;
+      }
+      .opts {
+        float: left;
+        width: 25%;
+        height: 28px;
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        text-align: left;
+        span {
+          display: inline-block;
+          height: 22px;
+          line-height: 22px;
+          padding: 0 4px;
+          :hover{
+            background: rgba(0, 0, 0, 0.08);
+          }
+        }
       }
     }
   }
@@ -111,15 +162,6 @@ export const HomeWrapper = styled.div`
         height: 45px;
         margin-right: 24px;
       }
-      #ct-aqi {
-        display: inline-block;
-        position: relative;
-        margin-right: 24px;
-        cursor: pointer;
-        .info-aqi {
-          background-color: #f1ab62;
-        }
-      }
     }
     #ct-other {
       vertical-align: middle;
@@ -139,9 +181,42 @@ export const HomeWrapper = styled.div`
           vertical-align: middle;
           margin-right: 10px;
         }
-        .wind-4 {
+        .wind {
           background-image: url(${iconImg});
+          background-size: 234px 212px;
+        }
+        .wind-0 {
           background-position: -98px -191px;
+        }
+        .wind-1 {
+          background-position: -75px -191px;
+        }
+        .wind-2 {
+          background-position: -191px -50px;
+        }
+        .wind-3 {
+          background-position: -29px -191px;
+        }
+        .wind-4 {
+          background-position: -191px -165px;
+        }
+        .wind-5 {
+          background-position: -167px -191px;
+        }
+        .wind-6 {
+          background-position: -144px -191px;
+        }
+        .wind-7 {
+          background-position: -191px -73px;
+        }
+        .humidity {
+          background-image: url(${iconImg});
+          background-position: -191px -119px;
+          background-size: 234px 212px;
+        }
+        .pressure {
+          background-image: url(${iconImg});
+          background-position: -191px -96px;
           background-size: 234px 212px;
         }
         .ct-other-item-txt {
@@ -154,152 +229,183 @@ export const HomeWrapper = styled.div`
     #ct-tips {
       letter-spacing: 0;
       #txt-tips {
-          vertical-align: middle;
-          font-size: 20px;
-          color: #fff;
-          line-height: 20px;
-          height: 20px;
-          display: inline-block;
-          :before {
-              content: '';
-              float: left;
-              height: 11px;
-              width: 11px;
-              margin-right: 13px;
-              background: #fff;
-              border-radius: 50%;
-              margin-top: 5px;
-          }
+        vertical-align: middle;
+        font-size: 20px;
+        color: #fff;
+        line-height: 20px;
+        height: 20px;
+        display: inline-block;
+        :before {
+          content: '';
+          float: left;
+          height: 11px;
+          width: 11px;
+          margin-right: 13px;
+          background: #fff;
+          border-radius: 50%;
+          margin-top: 5px;
+        }
       }
     }
     #ct-current-weather {
-        position: absolute;
-        top: 78px;
-        right: 80px;
-        width: 134px;
-        height: 134px;
-        img {
-            height: 134px;
-            width: 134px;
-        }
+      position: absolute;
+      top: 78px;
+      right: 80px;
+      width: 150x;
+      height: 150px;
+      .icon {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+      }
     }
   }
 
-  #ct-hours {
-      height: 143px;
-      margin: 130px auto 40px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.08);
-      width: 1140px;
-      padding: 20px 30px 27px;
-      overflow: hidden;
-      #title {
-          font-size: 18px;
-          color: #344665;
-          height: 21px;
-          line-height: 21px;
-          margin-bottom: 22px;
-          float: left;
-          margin-right: 10px;
-          :before {
-              content: "";
-              float: left;
-              height: 7px;
-              width: 7px;
-              overflow: hidden;
-              margin-right: 10px;
-              background: #344665;
-              border-radius: 50%;
-              margin-top: 8px;
-          }
+  #ct-7-days {
+    height: 400px;
+    margin: 130px auto 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.08);
+    width: 1140px;
+    padding: 20px 0px;
+    overflow: hidden;
+    #title {
+      font-size: 18px;
+      color: #344665;
+      height: 21px;
+      line-height: 21px;
+      margin-bottom: 22px;
+      float: left;
+      margin-right: 10px;
+      margin-left: 30px;
+      :before {
+        content: '';
+        float: left;
+        height: 7px;
+        width: 7px;
+        overflow: hidden;
+        margin-right: 10px;
+        background: #344665;
+        border-radius: 50%;
+        margin-top: 8px;
       }
-      #txt-source {
-          float: left;
+    }
+    .ct-page-ctrl {
+      float: right;
+      margin-right: 30px;
+      .btn {
+        float: left;
+        width: 22px;
+        height: 22px;
+      }
+      #btn-prev {
+        background-image: url(${iconImg});
+        background-position: -136px -154px;
+        background-size: 234px 212px;
+        margin-right: 8px;
+        :hover {
+          background-position: -161px -154px;
+        }
+      }
+      #btn-next {
+        background-image: url(${iconImg});
+        background-position: -191px 0;
+        background-size: 234px 212px;
+        :hover {
+          background-position: -191px -25px;
+        }
+      }
+    }
+    #ct-weather {
+      clear: both;
+      overflow: hidden;
+      position: relative;
+      ol {
+        list-style: none;
+        overflow: hidden;
+      }
+      .item {
+        width: 114px;
+        text-align: center;
+        float: left;
+        background-repeat: no-repeat;
+        background-position: right;
+        position: relative;
+        padding: 11px 0 25px;
+        .day {
+          font-size: 14px;
+          color: #384c78;
+          margin-bottom: 12px;
+          height: 14px;
+          line-height: 14px;
+        }
+        .date {
           font-size: 12px;
           color: #8a9baf;
-          height: 21px;
-          line-height: 21px;
-          text-decoration: none;
+          margin-bottom: 12px;
+          height: 12px;
+          line-height: 12px;
+        }
+        .time {
+          font-size: 12px;
+          color: #8a9baf;
+          margin-bottom: 30px;
+          height: 12px;
+          line-height: 12px;
+        }
+        .weather {
+          font-size: 14px;
+          color: #384c78;
+          line-height: 14px;
+          height: 14px;
+        }
+        .icon {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          vertical-align: middle;
+          fill: currentColor;
+          overflow: hidden;
+        }
+        .ct-daytime {
+          .weather {
+            margin-bottom: 20px;
+          }
+        }
+        .ct-night {
+          margin-top: 174px;
+          margin-bottom: 24px;
+          .icon {
+            margin-bottom: 20px;
+          }
+        }
+        .wind {
+          margin-top: 174px;
+          font-size: 12px;
+          color: #8a9baf;
+          line-height: 12px;
+          height: 12px;
+        }
       }
-      .ct-page-ctrl {
-          float: right;
-          .btn {
-              float:left;
-              width: 22px;
-              height: 22px;
-          }
-          #btn-prev {
-              background-image: url(${iconImg});
-              background-position: -136px -154px;
-              background-size: 234px 212px;
-              margin-right: 8px;
-          }
-          #btn-next {
-              background-image: url(${iconImg});
-              background-position: -191px 0;
-              background-size: 234px 212px
-          }
+      #chart-days {
+        width: 1140px;
+        height: 174px;
+        position: absolute;
+        top: 170px;
       }
-      #ct-hours-info {
-          clear: both;
-          width: 4800px;
-          transition: margin 1s ease-in-out;
-          .li-ct-hour {
-              float: left;
-              width: 40px;
-              margin-right: 60px;
-              text-align: center;
-              background-repeat: no-repeat;
-              background-position: right;
-              position: relative;
-              .txt-time {
-                  font-size: 14px;
-                  color: #8a9baf;
-                  line-height: 14px;
-                  height: 14px;
-                  margin-bottom: 24px;
-              }
-              .icon {
-                  display: block;
-                  height: 30px;
-                  width: 30px;
-                  margin: 0 auto;
-                  margin-bottom: 18px;
-              }
-              .txt-degree {
-                  font-size: 18px;
-                  color: #384c78;
-                  line-height: 14px;
-              }
-          }
-      }
+    }
   }
 
-  #ct-bottom {
-      margin-bottom: 35px;
-      #ct-7-days {
-          float: left;
-          width: 740px;
-          height: 492px;
-          padding: 20px 0 0;
-          border-radius: 10px;
-          background-color: #fff;
-          box-shadow: 0 0 14px rgba(0, 0, 0, 0.08);
-          #link-15-days {
-              float: right;
-              background: #f8faff;
-              border: 1px solid #dce5f0;
-              border-radius: 37px;
-              font-size: 12px;
-              color: #384c78;
-              line-height: 26px;
-              height: 26px;
-              width: 100px;
-              text-align: center;
-              margin-right: 30px;
-              text-decoration: none;
-          }
-      }
+  #ct-footer {
+    height: 140px;
+    background: #3a4570;
+    text-align: center;
+    color: #fff;
+    #contact-info {
+      padding-top: 50px;
+    }
   }
 `;

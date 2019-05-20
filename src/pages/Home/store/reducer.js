@@ -1,0 +1,22 @@
+import { fromJS } from 'immutable';
+import actionTypes from './actionTypes';
+
+const defaultState = fromJS({
+  current: {},
+  forcast: [],
+  page: 0,
+  hotCities: fromJS(['東京', '横浜', '京都', '大阪', '札幌', '名古屋']),
+});
+
+export default (state = defaultState, action) => {
+  switch (action.type) {
+    case actionTypes.GET_CURRENT:
+      return state.set('current', fromJS(action.data));
+    case actionTypes.GET_FORCAST:
+      return state.set('forcast', fromJS(action.data));
+    case actionTypes.SET_PAGE:
+      return state.set('page', action.page);
+    default:
+      return state;
+  }
+};

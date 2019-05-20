@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style>
+    body{
+      background-color: #f4f4f4;
+    }
+  </style>
+  <title>Document</title>
+  <script>
+    if(!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      window.location.href = "./";
+      console.log("PC端");
+    }
+  </script>
+  <script>
+    (function(){
+      var docEl = document.documentElement;
+      function setRemUnit(){
+      var rem = docEl.clientWidth / 10;
+      docEl.style.fontSize = rem + 'px';
+    }
+    setRemUnit();
+    window.addEventListener('resize',setRemUnit);
+  })();
+  </script>
+</head>
+<body>
+	<div id="root"></div>
+</body>
+</html>
