@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import bgImg from 'images/background.jpg';
 import iconImg from 'images/sprite-icons.png';
 
 export const HomeWrapper = styled.div`
-  background: #f6f9fe url(${bgImg}) no-repeat center top;
+  background: linear-gradient(90deg, #64cafa, #6561f4) no-repeat;
+  background-size: 100% 420px;
   position: relative;
   .container {
     position: relative;
@@ -29,6 +29,10 @@ export const HomeWrapper = styled.div`
     height: 37px;
     margin-top: 13px;
     display: block;
+    width: 100px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 37px;
   }
   #ct-location {
     text-align: right;
@@ -62,14 +66,13 @@ export const HomeWrapper = styled.div`
       }
     }
     #ct-hot-city {
-      display: none;
       position: absolute;
       width: 277px;
       min-height: 86px;
       background: #fff;
       left: 8px;
       top: 60px;
-      box-shadow: 0 0 4px 0 rgba(0,0,0,.1);
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       padding: 17px 0;
       color: #555;
@@ -103,7 +106,7 @@ export const HomeWrapper = styled.div`
           height: 22px;
           line-height: 22px;
           padding: 0 4px;
-          :hover{
+          :hover {
             background: rgba(0, 0, 0, 0.08);
           }
         }

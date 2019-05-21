@@ -12,6 +12,16 @@ const getForcastWeather = data => ({
   data,
 });
 
+const selectCity = cityID => ({
+  type: actionTypes.SELECT_CITY,
+  cityID,
+});
+
+const handleShowWindow = showWindow => ({
+  type: actionTypes.SHOW_WINDOW,
+  showWindow,
+});
+
 const setPage = page => ({
   type: actionTypes.SET_PAGE,
   page,
@@ -41,6 +51,12 @@ const getForcastData = cityID => (dispatch) => {
   });
 };
 
-export default { getCurrentData, getForcastData, setPage };
+export default {
+  getCurrentData,
+  getForcastData,
+  setPage,
+  handleShowWindow,
+  selectCity,
+};
 
 // export default { changeTab };

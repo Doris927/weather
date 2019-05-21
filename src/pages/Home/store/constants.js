@@ -1,3 +1,7 @@
+/**
+ * 変更しないデータ
+ */
+
 const mapIcons = new Map();
 mapIcons.set('clear sky daytime', '#icon-qingtianbaitian');
 mapIcons.set('clear sky night', '#icon-qingtianyewan');
@@ -22,6 +26,14 @@ cityNameToID.set('京都', 1857910);
 cityNameToID.set('大阪', 1853909);
 cityNameToID.set('札幌', 2128295);
 cityNameToID.set('名古屋', 1856057);
+
+const cityIDToName = new Map();
+cityIDToName.set(1850147, '東京');
+cityIDToName.set(1848354, '横浜');
+cityIDToName.set(1857910, '京都');
+cityIDToName.set(1853909, '大阪');
+cityIDToName.set(2128295, '札幌');
+cityIDToName.set(1856057, '名古屋');
 
 const appID = '4f21bb55b293bbd43578ce4c4d11ff6f';
 
@@ -56,4 +68,5 @@ export {
   mapE2J,
   mapMainWeather,
   totalPage,
+  cityIDToName,
 };

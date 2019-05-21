@@ -6,6 +6,8 @@ const defaultState = fromJS({
   forcast: [],
   page: 0,
   hotCities: fromJS(['東京', '横浜', '京都', '大阪', '札幌', '名古屋']),
+  showWindow: false,
+  cityID: 1850147,
 });
 
 export default (state = defaultState, action) => {
@@ -16,6 +18,10 @@ export default (state = defaultState, action) => {
       return state.set('forcast', fromJS(action.data));
     case actionTypes.SET_PAGE:
       return state.set('page', action.page);
+    case actionTypes.SHOW_WINDOW:
+      return state.set('showWindow', action.showWindow);
+    case actionTypes.SELECT_CITY:
+      return state.set('cityID', action.cityID);
     default:
       return state;
   }
