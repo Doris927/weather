@@ -8,7 +8,7 @@ class HomeMobile extends Component {
         <section id="sec-main" className="container">
           <p id="txt-location">
             <span id="icon-location" />
-            北京
+            東京
           </p>
           <div id="ct-pub">
             <p className="txt">中央气象台 22:40发布</p>
@@ -164,6 +164,29 @@ class HomeMobile extends Component {
         <footer id="sec-footer" className="container">
           <p id="contact-info">tammytangg@gmail.com</p>
         </footer>
+        <section id="sec-location" className="container show">
+          <div id="ct-search">
+            <a id="btn-cancel">取消</a>
+            <div id="ct-input">
+              <input type="text" id="i-location" placeholder="搜索地区/景区" />
+            </div>
+          </div>
+          <div id="ct-hot-city">
+            <div id="ct-history">
+              <a id="btn-clean" />
+              <p className="title">历史记录</p>
+              <ul className="ls-city">
+                <li className="opt city">北京</li>
+                <li className="opt city center">上海</li>
+              </ul>
+              <p className="title">热门城市</p>
+              <ul className="ls-city">
+                <li className="opt city">北京</li>
+                <li className="opt city center">上海</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </HomeMobileWrapper>
     );
   }
