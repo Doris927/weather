@@ -35,7 +35,7 @@ weather
 右上のボタンでページを変更できます。
 ![current](imgs/pc-forcast.png)
 ### 3.2 スマホ版
-まだネットに繋がってないですが、staticな画面を設計しました。
+まだネットに繋がってないですが、staticな画面を設計しました。(作成中)
 ![current](imgs/phone.png)
 
 ## 4. 利用した技術
