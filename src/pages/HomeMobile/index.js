@@ -20,13 +20,13 @@ class HomeMobile extends Component {
             {/* <p className="txt">湿度 25%</p> */}
           </div>
           <p id="txt-tips">你若安好，便是晴天</p>
-          <div className="ct-aqi">
+          {/* <div className="ct-aqi">
             <p id="til">46</p>
             <p id="value">优</p>
           </div>
           <ul id="ls-warning">
             <li className="warning level01">大风预警</li>
-          </ul>
+          </ul> */}
         </section>
         <section id="sec-tomorrow" className="container">
           <div className="item">

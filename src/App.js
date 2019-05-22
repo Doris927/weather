@@ -11,7 +11,7 @@ const App = ({ history }) => (
     <GlobalStyle />
     <IconFontGlobal />
     <Switch>
-      <Route exact path="/weather" component={Home} />
+      <Route exact path="/" component={Home} />
     </Switch>
   </ConnectedRouter>
 );

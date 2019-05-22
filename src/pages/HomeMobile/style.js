@@ -38,16 +38,18 @@ export const HomeMobileWrapper = styled.div`
       color: #fff;
     }
     #ct-pub {
-      height: ${px2rem(12)};
+      height: ${px2rem(18)};
+      padding-bottom: 10px;
+      display: block;
       .txt {
         opacity: 1;
         font-size: ${px2rem(12)};
         color: #fff;
         height: ${px2rem(12)};
         line-height: ${px2rem(12)};
+       
       }
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-      padding-bottom: ${px2rem(10)};
     }
     #txt-temperature {
       font-size: ${px2rem(62)};
