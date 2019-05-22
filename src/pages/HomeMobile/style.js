@@ -47,7 +47,6 @@ export const HomeMobileWrapper = styled.div`
         color: #fff;
         height: ${px2rem(12)};
         line-height: ${px2rem(12)};
-       
       }
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
