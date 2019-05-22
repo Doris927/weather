@@ -63,7 +63,10 @@ const windFormat = (degree) => {
     '西風',
     '西北風',
   ];
+
   const windType = Math.trunc(((degree + 22.5) % 360) / 45);
+  console.log('windType', windType);
+  console.log('degree', degree);
   return {
     windName: windNames[windType],
     windIcon: `wind-${windType}`,

@@ -309,6 +309,7 @@ export const HomeMobileWrapper = styled.div`
   }
 
   #sec-location {
+    display: none;
     &.show {
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
@@ -330,6 +331,7 @@ export const HomeMobileWrapper = styled.div`
       padding: 7px 0;
       border-bottom: 1px solid #eee;
       position: relative;
+      display: none;
       #btn-cancel {
         float: right;
         font-size: 14px;
@@ -353,7 +355,7 @@ export const HomeMobileWrapper = styled.div`
           color: #434343;
           -webkit-appearance: none;
           border-width: 0;
-          vertical-align:top;
+          vertical-align: top;
         }
       }
     }
